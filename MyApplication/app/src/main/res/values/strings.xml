@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="BillLabel">Bill:</string>
+    <string name="bill_hint_label">Type your bill</string>
+    <string name="tip_label">Tip</string>
+    <string name="tip_hint_label">Type your tip</string>
+    <string name="total_label">Total Bill:</string>
+    <string name="calc_button_text">CALC</string>
+</resources>
