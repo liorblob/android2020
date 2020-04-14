@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".Rating1">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/rateKindness"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:fontFamily="sans-serif-light" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:numStars="6" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="346dp"
+        android:layout_height="379dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="TODO"
+        app:srcCompat="@drawable/waiter" />
+
+    <Button
+        android:id="@+id/SecondButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:onClick="SecondButton"
+        android:text="@string/next"
+        android:textStyle="italic" />
+
+</LinearLayout>

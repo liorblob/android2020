@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="@string/calcTip"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="50sp"
+        android:typeface="normal"
+        app:fontFamily="sans-serif-condensed-light" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="261dp"
+        android:layout_height="266dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/calcpic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/restname"
+        android:textAllCaps="false"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="cursive" />
+
+    <EditText
+        android:id="@+id/RestoName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="8sp"
+        android:singleLine="false"
+        android:textStyle="italic"
+        android:typeface="normal"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/ButtonFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/darker_gray"
+        android:ellipsize="none"
+        android:onClick="firstButton"
+        android:text="@string/next"
+        android:textStyle="bold|italic" />
+
+</LinearLayout>
