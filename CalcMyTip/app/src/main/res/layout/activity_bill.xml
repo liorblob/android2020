@@ -12,25 +12,38 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:text="@string/billenter"
         android:textColor="@android:color/darker_gray"
-        android:textSize="30sp" />
+        android:textSize="60sp"
+        app:fontFamily="cursive" />
 
     <EditText
         android:id="@+id/AmoutBill"
         android:layout_width="268dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="number" />
 
-    <VideoView
-        android:id="@+id/videoView"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="253dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/bill" />
+
+    <Button
+        android:id="@+id/ToTipButton"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="ToTipButton"
+        android:text="@string/calctip"
+        android:textStyle="italic" />
 
 </LinearLayout>

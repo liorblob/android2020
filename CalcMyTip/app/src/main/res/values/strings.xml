@@ -19,4 +19,8 @@
     <string name="notgood">Not good at all</string>
     <string name="billenter">Enter Bill:</string>
     <string name="scroll">Scrool down for bonus</string>
+    <string name="tip2">Tip:</string>
+    <string name="totalam">Total amount is:</string>
+    <string name="suprise">Click For Suprise</string>
+    <string name="calctip">Calculate Tip</string>
 </resources>
