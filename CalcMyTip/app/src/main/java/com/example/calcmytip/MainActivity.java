@@ -10,7 +10,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     EditText RestoName;
-    EditText test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
