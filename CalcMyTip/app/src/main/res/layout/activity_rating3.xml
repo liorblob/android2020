@@ -17,12 +17,13 @@
         android:textSize="30sp" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="213dp"
         android:layout_marginTop="50dp">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pleasing"
@@ -43,15 +44,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/notvery"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="24sp" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:text="@string/notgood"
             android:textColor="@android:color/darker_gray"
             android:textSize="24sp" />
@@ -67,10 +59,10 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        android:textStyle="italic"
         android:layout_marginTop="5dp"
         android:background="@android:color/darker_gray"
-        android:onClick="ForthButton"/>
+        android:onClick="onClickNext"
+        android:text="@string/next"
+        android:textStyle="italic" />
 
 </LinearLayout>

@@ -9,18 +9,23 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText RestoName;
+    public static final String KEY_RESTAURANTNAME = "restaurantNameKey";
+    EditText restoName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RestoName = findViewById(R.id.RestoName);
+        restoName = findViewById(R.id.RestoName);
     }
 
-    public void firstButton(View view) {
+    public void onClickNext(View view) {
+
         Intent intent = new Intent(this, Rating1.class);
+        intent.putExtra(KEY_RESTAURANTNAME,restoName.getText().toString());
         startActivity(intent);
     }
+
+
 }

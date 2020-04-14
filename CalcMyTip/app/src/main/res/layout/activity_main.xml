@@ -59,7 +59,7 @@
         android:layout_marginTop="30dp"
         android:background="@android:color/darker_gray"
         android:ellipsize="none"
-        android:onClick="firstButton"
+        android:onClick="onClickNext"
         android:text="@string/next"
         android:textStyle="bold|italic" />
 
