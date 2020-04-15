@@ -45,18 +45,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:lineSpacingExtra="8sp"
         android:singleLine="false"
+        android:textSize="36sp"
         android:textStyle="italic"
         android:typeface="normal"
-        android:importantForAutofill="no" />
+        app:fontFamily="cursive" />
 
     <Button
         android:id="@+id/ButtonFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/darker_gray"
         android:ellipsize="none"
         android:onClick="onClickNext"
