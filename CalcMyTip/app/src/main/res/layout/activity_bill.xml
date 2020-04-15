@@ -20,30 +20,68 @@
         app:fontFamily="cursive" />
 
     <EditText
-        android:id="@+id/AmoutBill"
+        android:id="@+id/textEditBill"
         android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textSize="60sp"
+        app:fontFamily="cursive" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/tip2"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="50sp"
+            app:fontFamily="cursive" />
+
+        <TextView
+            android:id="@+id/textViewTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:fontFamily="cursive" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="253dp"
         android:layout_height="225dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/bill" />
 
     <Button
         android:id="@+id/ToTipButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/darker_gray"
-        android:onClick="ToTipButton"
-        android:text="@string/calctip"
+        android:onClick="onCalculateBill"
+        android:text="@string/calcBill"
         android:textStyle="italic" />
 
 </LinearLayout>
