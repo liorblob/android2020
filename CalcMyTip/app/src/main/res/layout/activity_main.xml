@@ -50,7 +50,9 @@
         android:singleLine="false"
         android:textStyle="italic"
         android:typeface="normal"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:textSize="60sp"
+        app:fontFamily="cursive" />
 
     <Button
         android:id="@+id/ButtonFirst"
