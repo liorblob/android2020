@@ -26,7 +26,9 @@ public class Rating3 extends AppCompatActivity {
         if (id != 0){
             RadioButton radio = findViewById(id);
             radio.setChecked(true);
-            Log.i("Shared Preferences:", "Setting Radio button id: "+ radio.getId());
+            String fullName = getResources().getResourceName(id);
+            String name = fullName.substring(fullName.lastIndexOf("/") + 1);
+            Log.i("Shared Preferences:", "Setting Radio button id: "+ name);
         }
 
     }
@@ -65,7 +67,9 @@ public class Rating3 extends AppCompatActivity {
         editor.putInt(KEY_RADIO,radioGroup.getCheckedRadioButtonId());
         editor.commit();
         RadioButton radio = findViewById(radioGroup.getCheckedRadioButtonId());
-        Log.i("Shared Preferences:", "Saving Radio button id: "+ radio.getId());
+        String fullName = getResources().getResourceName(radio.getId());
+        String name = fullName.substring(fullName.lastIndexOf("/") + 1);
+        Log.i("Shared Preferences:", "Saving Radio button id: "+ name);
     }
 
 }
