@@ -48,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
+                android:checked="false"
                 android:text="@string/meal6"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="24sp" />
@@ -65,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:background="@android:color/darker_gray"
-                android:onClick="ThirdButton"
+                android:onClick="onClickNext"
                 android:text="@string/next"
                 android:textStyle="italic" />
 

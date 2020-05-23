@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">חשב לי טיפ</string>
+    <string name="calcTip">חשב לי טיפ</string>
+    <string name="restname">שם המסעדה:</string>
+    <string name="city">עיר:</string>
+    <string name="next">הבא</string>
+    <string name="rateKindness">איך היה המלצר/ית שלך?</string>
+    <string name="amount">חשבון:</string>
+    <string name="tip">אחוז טיפ מקסימאלי</string>
+    <string name="check">דרג/י את זמני ההמתנה:</string>
+    <string name="meal">כל המנות הגיעו בזמן</string>
+    <string name="meal3">כל המנות העיקריות הגיעו ביחד</string>
+    <string name="meal5">כל המנות הגיעו פחות מחצי שעה מזמן ההזמנה</string>
+    <string name="meal6">כל המנות היו טעימות</string>
+    <string name="atmosphere">דרג/י את אווירת המסעדה</string>
+    <string name="pleasing">מאוד נעימה</string>
+    <string name="average">ממוצעת</string>
+    <string name="notgood">לא טובה</string>
+    <string name="billenter">הכנס/י חשבון:</string>
+    <string name="scroll">גללו למטה בשביל בונוס</string>
+    <string name="tip2">טיפ:</string>
+    <string name="totalam">סך הכל לתשלום:</string>
+    <string name="pay">תשלום</string>
+    <string name="calcBill">חישוב חשבון</string>
+    <string name="paidTo">שולח תשלום אל:</string>
+</resources>
