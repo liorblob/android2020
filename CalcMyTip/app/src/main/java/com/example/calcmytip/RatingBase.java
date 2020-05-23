@@ -29,4 +29,5 @@ public abstract class RatingBase extends AppCompatActivity {
     protected abstract String calculateRating(String base);
 
 
+
 }
