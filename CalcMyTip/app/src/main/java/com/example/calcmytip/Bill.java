@@ -14,6 +14,7 @@ public class Bill extends AppCompatActivity {
 
     public static final String KEY_BILL = "billKey";
     public static final String KEY_TOPAY = "toPayKey";
+
     int tip;
     TextView textTip;
     EditText editTextBill;
@@ -22,18 +23,21 @@ public class Bill extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+
         textTip = findViewById(R.id.textViewTip);
         editTextBill = findViewById(R.id.textEditBill);
 
+        //Retrieving all 3 ratings and calculating Tip Percentage
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
         tip = (prefs.getInt(Rating1.KEY_TIP,0) + prefs.getInt(Rating2.KEY_TIP,0) + prefs.getInt(Rating3.KEY_TIP,0));
-        /*if (tip == 0){
-            tip = 10;
-        }*/
+
+        //Retrieving Bill before tip and presenting to the user
         String str = prefs.getString(KEY_TOPAY,"");
         editTextBill.setText(str);
-        Log.i("Shared Preferences:", "Setting To pay: "+ str);
         textTip.setText(Integer.toString(tip));
+
+       //Log State
+        Log.i("Shared Preferences:", "Setting To pay: "+ str);
     }
 
     public void onCalculateBill(View view) {
@@ -44,7 +48,7 @@ public class Bill extends AppCompatActivity {
 
         int total = (bill*(100+tip))/100;
 
-
+        //Passing total bill value
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(KEY_BILL, ""+total);
@@ -55,7 +59,10 @@ public class Bill extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        //Save As last Activity
         Dispatcher.saveActivity(this);
+
+        //Save Activity's data
         SharedPreferences pref = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putString(KEY_TOPAY,editTextBill.getText().toString());

@@ -21,6 +21,8 @@ public class Rating1 extends AppCompatActivity {
         setContentView(R.layout.activity_rating1);
 
         rbWaiter = findViewById(R.id.waiterRating);
+
+        //retrieving saved data
         float f = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE).getFloat(KEY_BAR, 0f);
         rbWaiter.setRating(f);
         Log.i("Shared Preferences:", "get RatingBar rate: "+f);
@@ -43,11 +45,16 @@ public class Rating1 extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        //Save As last Activity
         Dispatcher.saveActivity(this);
+
+        //Save Activity's data
         SharedPreferences pref = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putFloat(KEY_BAR,rbWaiter.getRating());
         editor.commit();
+
+        //Log
         Log.i("Shared Preferences:", "Saving RatingBar rate: "+rbWaiter.getRating());
     }
 }

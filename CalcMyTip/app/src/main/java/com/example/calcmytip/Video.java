@@ -40,13 +40,15 @@ public class Video extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.remove(Dispatcher.LAST_ACTIVITY);
         editor.commit();
-        Log.i("Shared Preferences:", "Last activity, Removing LAST_ACTIVITY Key");
 
         //clear Saved prefs
         prefs = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE);
         editor = prefs.edit();
         editor.clear();
         editor.commit();
+
+        //log
+        Log.i("Shared Preferences:", "Last activity, Removing LAST_ACTIVITY Key");
         Log.i("Shared Preferences:", "Last activity, Clearing PREFS");
     }
 

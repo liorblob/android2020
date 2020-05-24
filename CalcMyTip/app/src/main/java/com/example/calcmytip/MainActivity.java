@@ -21,18 +21,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         restoName = findViewById(R.id.RestoName);
+
+        //retrieving saved data
         String str = getSharedPreferences(PREFS,MODE_PRIVATE).getString(KEY_RESTAURANT, "");
         restoName.setText(str);
+
+        //log
         Log.i("Shared Preferences:", "get restaurant name: "+str);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        //Save Activity's data
         SharedPreferences pref = getSharedPreferences(PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putString(KEY_RESTAURANT,restoName.getText().toString());
         editor.commit();
+
+        //log
         Log.i("Shared Preferences:", "Saving restaurant name: "+restoName.getText().toString());
     }
 

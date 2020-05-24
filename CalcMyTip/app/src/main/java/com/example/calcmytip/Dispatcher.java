@@ -16,7 +16,7 @@ public class Dispatcher extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("Shared Preferences:", "in dispatcher");
+
         Class<?> activityClass;
 
         try {
@@ -25,7 +25,10 @@ public class Dispatcher extends Activity {
         } catch(ClassNotFoundException ex) {
             activityClass = MainActivity.class;
         }
+        //Log
+        Log.i("Shared Preferences:", "in dispatcher");
         Log.i("Shared Preferences:", "going to activity: "+activityClass.getSimpleName());
+
         startActivity(new Intent(this, activityClass));
     }
 

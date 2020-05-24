@@ -30,6 +30,7 @@ public class Tip extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        //Save As last Activity
         Dispatcher.saveActivity(this);
 
     }
