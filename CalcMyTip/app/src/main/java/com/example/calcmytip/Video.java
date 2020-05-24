@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.SharedPreferences;
+import android.util.Log;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -22,7 +24,7 @@ public class Video extends AppCompatActivity {
         setContentView(R.layout.activity_video);
 
         tvRestName = findViewById(R.id.textViewRestName);
-        tvRestName.setText(getIntent().getStringExtra(MainActivity.KEY_RESTAURANTNAME));
+        tvRestName.setText(getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE).getString(MainActivity.KEY_RESTAURANT,"CoffeBar"));
 
         MediaPlayer.create(this,R.raw.cashsound).start();
         videoView=findViewById(R.id.videoView);
@@ -35,6 +37,22 @@ public class Video extends AppCompatActivity {
         videoView.requestFocus();
 
         videoView.start();
+
+        //clear Saved Activity
+        SharedPreferences prefs = getSharedPreferences(Dispatcher.DISPATCH, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.remove(Dispatcher.LAST_ACTIVITY);
+        editor.commit();
+
+        //clear Saved prefs
+        prefs = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE);
+        editor = prefs.edit();
+        editor.clear();
+        editor.commit();
+
+        //log
+        Log.i("Shared Preferences:", "Last activity, Removing LAST_ACTIVITY Key");
+        Log.i("Shared Preferences:", "Last activity, Clearing PREFS");
     }
 
     @Override
@@ -70,4 +88,5 @@ public class Video extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
 }

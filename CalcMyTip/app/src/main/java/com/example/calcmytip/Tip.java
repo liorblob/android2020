@@ -3,9 +3,11 @@ package com.example.calcmytip;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,14 +20,21 @@ public class Tip extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tip);
         tvTotal = findViewById(R.id.textViewTotal);
-        tvTotal.setText(getIntent().getStringExtra(Bill.KEY_BILL));
+        tvTotal.setText(getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE).getString(Bill.KEY_BILL,"0"));
 
     }
 
     public void onClickPay(View view) {
-        Intent intent = new Intent(this, Video.class);
-        intent.putExtra(MainActivity.KEY_RESTAURANTNAME,getIntent().getStringExtra(MainActivity.KEY_RESTAURANTNAME));
-        startActivity(intent);
+
+        startActivity(new Intent(this, Video.class));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //Save As last Activity
+        Dispatcher.saveActivity(this);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
