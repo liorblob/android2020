@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
@@ -25,7 +27,7 @@ public class Rating3 extends AppCompatActivity {
 
         //retrieving saved data
         int id = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE).getInt(KEY_RADIO, 0);
-        if (id != 0){
+        if (id > 0){
             RadioButton radio = findViewById(id);
             radio.setChecked(true);
 
@@ -38,11 +40,15 @@ public class Rating3 extends AppCompatActivity {
     }
 
     public void onClickNext(View view){
+        saveData();
+        startActivity(new Intent(this,  Bill.class ));
+    }
+
+    private void saveData() {
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_TIP,calculateRating());
         editor.commit();
-        startActivity(new Intent(this,  Bill.class ));
     }
 
     private int calculateRating(){
@@ -61,6 +67,39 @@ public class Rating3 extends AppCompatActivity {
         }
         return rank;
     }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        Intent nextActivity;
+
+        int id = item.getItemId();
+        if (id == R.id.home) {
+            nextActivity = new Intent(this,MainActivity.class);
+        }
+        else if (id == R.id.rating1) {
+            nextActivity = new Intent(this,Rating1.class);
+        }
+        else if (id == R.id.rating2) {
+            nextActivity = new Intent(this,Rating2.class);
+        }
+        else
+        {
+            nextActivity = new Intent(this,Rating3.class);
+        }
+        saveData();
+        startActivity(nextActivity);
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onPause() {
@@ -75,9 +114,14 @@ public class Rating3 extends AppCompatActivity {
         editor.commit();
 
         //log
-        RadioButton radio = findViewById(radioGroup.getCheckedRadioButtonId());
-        String fullName = getResources().getResourceName(radio.getId());
-        String name = fullName.substring(fullName.lastIndexOf("/") + 1);
+        int id = radioGroup.getCheckedRadioButtonId();
+        String name = "None Checked";
+        if (id > 0){
+            RadioButton radio = findViewById(id);
+            String fullName = getResources().getResourceName(radio.getId());
+            name = fullName.substring(fullName.lastIndexOf("/") + 1);
+        }
+
         Log.i("Shared Preferences:", "Saving Radio button id: "+ name);
     }
 
