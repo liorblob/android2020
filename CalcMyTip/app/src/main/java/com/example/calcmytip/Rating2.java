@@ -54,15 +54,12 @@ public class Rating2 extends AppCompatActivity {
     private int calculateRating(){
 
         int rank = 0;
-        if (((CheckBox)findViewById(R.id.checkBox1)).isChecked()){
-            rank += 2;
+        for (CheckBox cb: ratings) {
+            if(cb.isChecked()){
+                rank += 2;
+            }
         }
-        if (((CheckBox)findViewById(R.id.checkBox2)).isChecked()){
-            rank += 2;
-        }
-        if (((CheckBox)findViewById(R.id.checkBox3)).isChecked()){
-            rank += 2;
-        }
+
         return rank;
     }
 

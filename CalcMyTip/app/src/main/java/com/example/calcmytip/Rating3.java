@@ -114,9 +114,14 @@ public class Rating3 extends AppCompatActivity {
         editor.commit();
 
         //log
-        RadioButton radio = findViewById(radioGroup.getCheckedRadioButtonId());
-        String fullName = getResources().getResourceName(radio.getId());
-        String name = fullName.substring(fullName.lastIndexOf("/") + 1);
+        int id = radioGroup.getCheckedRadioButtonId();
+        String name = "None Checked";
+        if (id > 0){
+            RadioButton radio = findViewById(id);
+            String fullName = getResources().getResourceName(radio.getId());
+            name = fullName.substring(fullName.lastIndexOf("/") + 1);
+        }
+
         Log.i("Shared Preferences:", "Saving Radio button id: "+ name);
     }
 
