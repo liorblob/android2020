@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+
         //Save Activity's data
         SharedPreferences pref = getSharedPreferences(PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
