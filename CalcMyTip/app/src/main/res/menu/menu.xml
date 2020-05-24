@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/home"
         android:orderInCategory="10"
-        android:title="Home"
+        android:title="@string/home"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_home"
         />
 
     <item android:id="@+id/rating1"
         android:orderInCategory="50"
-        android:title="Waiter Rate"
+        android:title="@string/waiter_rate"
         app:showAsAction="never" />
 
     <item android:id="@+id/rating2"
         android:orderInCategory="100"
-        android:title="Serving Rate"
+        android:title="@string/serving_rate"
         app:showAsAction="never" />
 
     <item android:id="@+id/rating3"
         android:orderInCategory="150"
-        android:title="Atmosphere Rate"
+        android:title="@string/atmosphere_rate"
         app:showAsAction="never" />
 </menu>

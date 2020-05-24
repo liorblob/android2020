@@ -23,4 +23,8 @@
     <string name="pay">Pay</string>
     <string name="calcBill">Calculate Bill</string>
     <string name="paidTo">Snding Payment To:</string>
+    <string name="home">Home</string>
+    <string name="waiter_rate">Waiter Rate</string>
+    <string name="serving_rate">Serving Rate</string>
+    <string name="atmosphere_rate">Atmosphere Rate</string>
 </resources>

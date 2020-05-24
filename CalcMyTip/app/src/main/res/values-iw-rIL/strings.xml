@@ -24,4 +24,8 @@
     <string name="pay">תשלום</string>
     <string name="calcBill">חישוב חשבון</string>
     <string name="paidTo">שולח תשלום אל:</string>
+    <string name="home">בית</string>
+    <string name="waiter_rate">דירוג מלצר</string>
+    <string name="serving_rate">דירוג הגשה</string>
+    <string name="atmosphere_rate">דירוג אווירה</string>
 </resources>
