@@ -27,7 +27,7 @@ public class Rating3 extends AppCompatActivity {
 
         //retrieving saved data
         int id = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE).getInt(KEY_RADIO, 0);
-        if (id != 0){
+        if (id > 0){
             RadioButton radio = findViewById(id);
             radio.setChecked(true);
 
@@ -40,11 +40,15 @@ public class Rating3 extends AppCompatActivity {
     }
 
     public void onClickNext(View view){
+        saveData();
+        startActivity(new Intent(this,  Bill.class ));
+    }
+
+    private void saveData() {
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_TIP,calculateRating());
         editor.commit();
-        startActivity(new Intent(this,  Bill.class ));
     }
 
     private int calculateRating(){
@@ -91,7 +95,7 @@ public class Rating3 extends AppCompatActivity {
         {
             nextActivity = new Intent(this,Rating3.class);
         }
-
+        saveData();
         startActivity(nextActivity);
 
         return super.onOptionsItemSelected(item);

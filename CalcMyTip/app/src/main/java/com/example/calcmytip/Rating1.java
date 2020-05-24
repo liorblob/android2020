@@ -31,11 +31,15 @@ public class Rating1 extends AppCompatActivity {
     }
 
     public void onClickNext(View view){
+        saveData();
+        startActivity(new Intent(this,  Rating2.class ));
+    }
+
+    private void saveData() {
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_TIP,calculateRating());
         editor.commit();
-        startActivity(new Intent(this,  Rating2.class ));
     }
 
 
@@ -87,7 +91,7 @@ public class Rating1 extends AppCompatActivity {
         {
             nextActivity = new Intent(this,Rating3.class);
         }
-
+        saveData();
         startActivity(nextActivity);
 
         return super.onOptionsItemSelected(item);
