@@ -63,4 +63,10 @@ public class Rating1 extends BaseActivity {
         //Log
         Log.i("Shared Preferences:", "Saving RatingBar rate: "+rbWaiter.getRating());
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        saveData();
+        return super.onOptionsItemSelected(item);
+    }
 }

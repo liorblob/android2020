@@ -92,4 +92,10 @@ public class Rating3 extends BaseActivity
         Log.i("Shared Preferences:", "Saving Radio button id: "+ name);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        saveData();
+        return super.onOptionsItemSelected(item);
+    }
+
 }

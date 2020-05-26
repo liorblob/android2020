@@ -14,7 +14,7 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-public class Video extends BaseActivity {
+public class Video extends AppCompatActivity {
 
     VideoView videoView;
     TextView tvRestName;

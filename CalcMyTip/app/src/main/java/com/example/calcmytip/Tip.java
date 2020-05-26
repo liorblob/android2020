@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class Tip extends BaseActivity {
+public class Tip extends AppCompatActivity {
 
    TextView tvTotal;
 

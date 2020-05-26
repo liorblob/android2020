@@ -81,4 +81,10 @@ public class Rating2 extends BaseActivity {
         editor.commit();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        saveData();
+        return super.onOptionsItemSelected(item);
+    }
+
 }
