@@ -22,4 +22,9 @@
         android:orderInCategory="150"
         android:title="@string/atmosphere_rate"
         app:showAsAction="never" />
+
+    <item android:id="@+id/location"
+        android:orderInCategory="150"
+        android:title="@string/location"
+        app:showAsAction="never" />
 </menu>
