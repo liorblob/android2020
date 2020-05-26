@@ -27,4 +27,5 @@
     <string name="waiter_rate">Waiter Rate</string>
     <string name="serving_rate">Serving Rate</string>
     <string name="atmosphere_rate">Atmosphere Rate</string>
+    <string name="location">Search Restaurant</string>
 </resources>

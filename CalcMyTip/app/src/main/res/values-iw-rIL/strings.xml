@@ -28,4 +28,5 @@
     <string name="waiter_rate">דירוג מלצר</string>
     <string name="serving_rate">דירוג הגשה</string>
     <string name="atmosphere_rate">דירוג אווירה</string>
+    <string name="location">חפש מסעדה</string>
 </resources>
