@@ -27,15 +27,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     @NonNull
     @Override
-    public PostViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
+    public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View postView = inflater.inflate(R.layout.post_card_view, parent, false);
 
-        PostViewHolder viewHolder = new PostViewHolder(postView);
-
-        return viewHolder;
+        return new PostViewHolder(postView);
     }
 
 
@@ -45,7 +43,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         holder.postTitle.setText(answer.getTitle());
         holder.postLink.setText(answer.getLink());
-
 
         Glide.with(holder.itemView.getContext())
                 .load(answer.getOwner().getProfileImage())
@@ -61,7 +58,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         return this.posts.size();
     }
 
-    public class PostViewHolder extends RecyclerView.ViewHolder{
+    public class PostViewHolder extends RecyclerView.ViewHolder {
 
         private TextView postTitle;
         private TextView postLink;

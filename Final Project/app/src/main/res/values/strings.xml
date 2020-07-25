@@ -3,4 +3,5 @@
     <string name="introduction">Welcome to the StackOverflow app! Please type in what you\'re looking for.</string>
     <string name="search_placeholder">Search...</string>
     <string name="search_button">Search</string>
+    <string name="no_data_available">No results found.</string>
 </resources>
