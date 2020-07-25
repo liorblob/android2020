@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.stackoverflow.adapter.PostAdapter;
 import com.example.stackoverflow.model.Item;
@@ -24,6 +26,7 @@ public class ResultsActivity extends AppCompatActivity {
     private GetStackOFDataService stackOFService;
     List<Item> posts;
     RecyclerView rvPosts;
+    TextView emptyView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +37,24 @@ public class ResultsActivity extends AppCompatActivity {
         String search = intent.getStringExtra(MainActivity.EXTRA_SEARCH);
 
         rvPosts = findViewById(R.id.recyclerView);
+        emptyView = findViewById(R.id.empty_view);
 
         // Initialize stackoverflow
         stackOFService = RetrofitInstance.getRetrofitInstance().create(GetStackOFDataService.class);
         stackOFService.getAnswers("DESC","stackoverflow", "creation", search).enqueue(new Callback<StackOFResult>() {
             @Override
             public void onResponse(Call<StackOFResult> call, Response<StackOFResult> response) {
-                posts =response.body().getItems();
+                posts = response.body().getItems();
+
+                if(posts.isEmpty()){
+                    rvPosts.setVisibility(View.GONE);
+                    emptyView.setVisibility(View.VISIBLE);
+                    return;
+                }
+                else {
+                    rvPosts.setVisibility(View.VISIBLE);
+                    emptyView.setVisibility(View.GONE);
+                }
 
                 for (Item i: posts) {
                     Log.i("stackoverflow", "Got post title: " + i.getTitle());
