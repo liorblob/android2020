@@ -4,4 +4,7 @@
     <string name="search_placeholder">Search...</string>
     <string name="search_button">Search</string>
     <string name="no_data_available">No results found.</string>
+    <string name="results_help">Click a link to open...</string>
+    <string name="history_help">Click Search Term to Rerun Search</string>
+    <string name="history_delete">Swipe item to delete</string>
 </resources>

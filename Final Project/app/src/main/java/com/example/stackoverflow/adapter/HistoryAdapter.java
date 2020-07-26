@@ -26,6 +26,8 @@ import static android.content.Context.MODE_PRIVATE;
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
 
     private List<Search> searches;
+    private Search recentlyDeletedItem;
+    private int recentlyDeletedItemPosition;
 
     public HistoryAdapter(List<Search> searches) {
         this.searches = searches;
@@ -71,6 +73,20 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         return this.searches.size();
     }
 
+    public void removeItem(int position) {
+        searches.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(Search item, int position) {
+        searches.add(position, item);
+        notifyItemInserted(position);
+    }
+
+    public List<Search> getSearches() {
+        return searches;
+    }
+
     public class HistoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView searchID;
@@ -86,9 +102,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             searchItem.setOnClickListener(this);
         }
 
-        private void saveSharedPrefs(String searchText){
 
-        }
         @Override
         public void onClick(View v) {
             SharedPreferences pref =v.getContext().getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);

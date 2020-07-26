@@ -11,12 +11,9 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.stackoverflow.model.Search;
 import com.example.stackoverflow.services.DBService;
 import com.example.stackoverflow.services.DispatcherService;
 import com.example.stackoverflow.services.LocationService;
-
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
@@ -26,7 +23,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     public static final String PREFS = "prefsKey";
     public static final String KEY_SEARCH = "searchKey";
-    public static final String EXTRA_SEARCH = "com.example.stackoverflow.SEARCH";
+    public static final String KEY_POST_URL = "postURLKey";
+
 
 
     @Override
@@ -82,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     protected void onPause() {
         super.onPause();
         saveSharedPrefs(editText.getText().toString());
+        DispatcherService.resetActivity(this);
     }
 
     @Override
