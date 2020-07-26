@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.example.stackoverflow.model.Item;
 import com.example.stackoverflow.model.StackOFResult;
 import com.example.stackoverflow.network.GetStackOFDataService;
 import com.example.stackoverflow.network.RetrofitInstance;
+import com.example.stackoverflow.services.DispatcherService;
 
 import java.util.List;
 
@@ -33,8 +35,9 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        Intent intent = getIntent();
-        String search = intent.getStringExtra(MainActivity.EXTRA_SEARCH);
+        //get search term saved in shared prefs
+        SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
+        String search = prefs.getString(MainActivity.KEY_SEARCH,"android");
 
         rvPosts = findViewById(R.id.recyclerView);
         emptyView = findViewById(R.id.empty_view);
@@ -76,5 +79,16 @@ public class ResultsActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //Save As last Activity
+        DispatcherService.saveActivity(this);
+    }
+
+    public void gohome(View view) {
+        startActivity(new Intent(this,MainActivity.class));
     }
 }

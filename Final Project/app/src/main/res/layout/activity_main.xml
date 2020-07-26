@@ -30,4 +30,11 @@
         android:layout_height="wrap_content"
         android:onClick="search"
         android:text="@string/search_button" />
+
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goHistory"
+        android:text="History" />
 </LinearLayout>
