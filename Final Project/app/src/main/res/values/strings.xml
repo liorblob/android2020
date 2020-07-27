@@ -7,4 +7,21 @@
     <string name="results_help">Click a link to open...</string>
     <string name="history_help">Click Search Term to Rerun Search</string>
     <string name="history_delete">Swipe item to delete</string>
+    <string name="mainaboutus">About Us</string>
+    <string name="imagename">Hodaya Nir</string>
+    <string name="image1_age">age: 26</string>
+    <string name="image1_profession">profession: Citrix System Administrator</string>
+    <string name="image1_hobbies">Hobbies: dancing, reading, meetings with friends</string>
+    <string name="image2_name">Itamar Glick</string>
+    <string name="image2_age">Age: 45</string>
+    <string name="image2_hobbies">Hobbies: watching movies, computers</string>
+    <string name="image3_Name">Amit Markus</string>
+    <string name="image3_age">Age: 25</string>
+    <string name="image3_profession">Profession: Cyber systems Implementor</string>
+    <string name="image3_hobbies">Hobbies: photography</string>
+    <string name="image4_name">Lior Blobstein</string>
+    <string name="image4_age">Age: 27</string>
+    <string name="image4_profession">Profession: Software Engineer</string>
+    <string name="image4_hobbies">Hobbies: beer, netflix, zoom meetings</string>
+    <string name="empty" />
 </resources>
