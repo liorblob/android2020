@@ -16,7 +16,7 @@ import com.example.stackoverflow.services.DispatcherService;
 import com.example.stackoverflow.services.LocationService;
 
 
-public class MainActivity extends AppCompatActivity implements LocationListener {
+public class MainActivity extends BaseActivity implements LocationListener {
     private DBService dbService;
     private LocationService locationService;
     EditText editText;

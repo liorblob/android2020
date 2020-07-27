@@ -22,12 +22,13 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
-public class HistoryActivity extends AppCompatActivity {
+public class HistoryActivity extends BaseActivity {
 
     private DBService dbService;
     private List<Search> searches;
     private RecyclerView historyRecycler;
     private HistoryAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

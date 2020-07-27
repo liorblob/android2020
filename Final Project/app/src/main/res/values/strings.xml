@@ -10,7 +10,7 @@
     <string name="mainaboutus">About Us</string>
     <string name="imagename">Hodaya Nir</string>
     <string name="image1_age">age: 26</string>
-    <string name="image1_profession">profession: Citrix System Administrator</string>
+    <string name="image1_profession">Profession: Citrix System Administrator</string>
     <string name="image1_hobbies">Hobbies: dancing, reading, meetings with friends</string>
     <string name="image2_name">Itamar Glick</string>
     <string name="image2_age">Age: 45</string>
@@ -24,4 +24,9 @@
     <string name="image4_profession">Profession: Software Engineer</string>
     <string name="image4_hobbies">Hobbies: beer, netflix, zoom meetings</string>
     <string name="empty" />
+
+    <string name="home">Home</string>
+    <string name="history_ac">History</string>
+    <string name="about_ac">About</string>
+
 </resources>
