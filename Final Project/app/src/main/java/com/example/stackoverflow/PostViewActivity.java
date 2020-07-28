@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.stackoverflow.services.DispatcherService;
 
-public class PostViewActivity extends AppCompatActivity {
+public class PostViewActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class PostViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post_view);
 
         //get search term saved in shared prefs
-        SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS,MODE_PRIVATE);
-        String postUrl = prefs.getString(MainActivity.KEY_POST_URL,"https://stackoverflow.com/");
+        SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE);
+        String postUrl = prefs.getString(MainActivity.KEY_POST_URL, "https://stackoverflow.com/");
 
     }
 
