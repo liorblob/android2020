@@ -28,5 +28,6 @@
     <string name="home">Home</string>
     <string name="history_ac">History</string>
     <string name="about_ac">About</string>
+    <string name="aboutStack">About StackOverflow</string>
 
 </resources>
