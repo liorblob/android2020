@@ -1,7 +1,5 @@
 package com.example.stackoverflow;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.MediaController;
@@ -24,6 +22,7 @@ public class AboutActivity extends BaseActivity {
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
+        videoView.seekTo(2000);
     }
 
     @Override

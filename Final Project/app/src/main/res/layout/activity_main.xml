@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -16,20 +16,27 @@
         android:text="@string/introduction"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <EditText
-        android:id="@+id/search_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/search_placeholder"
-        android:inputType="textPersonName" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="search"
-        android:text="@string/search_button" />
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="bottom"
+            android:hint="@string/search_placeholder"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="85px"
+            android:background="@android:drawable/ic_menu_search"
+            android:onClick="search" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/historyButton"

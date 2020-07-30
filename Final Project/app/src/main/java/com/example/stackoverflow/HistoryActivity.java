@@ -1,13 +1,11 @@
 package com.example.stackoverflow;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,9 +50,6 @@ public class HistoryActivity extends BaseActivity {
         DispatcherService.saveActivity(this);
     }
 
-    public void gohome(View view) {
-        startActivity(new Intent(this,MainActivity.class));
-    }
 
     private void enableSwipeToDeleteAndUndo() {
         SwipeToDeleteCallback swipeToDeleteCallback = new SwipeToDeleteCallback(this) {
