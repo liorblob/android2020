@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -11,6 +12,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME |
+                ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP | ActionBar.DISPLAY_USE_LOGO);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         return true;
     }
 

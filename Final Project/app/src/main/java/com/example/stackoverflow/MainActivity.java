@@ -7,11 +7,9 @@ import android.location.LocationListener;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.stackoverflow.services.DBService;
 import com.example.stackoverflow.services.DispatcherService;
@@ -21,8 +19,7 @@ import com.example.stackoverflow.services.LocationService;
 public class MainActivity extends BaseActivity implements LocationListener {
     private DBService dbService;
     private LocationService locationService;
-    EditText editText;
-    private Button searchButton;
+    private EditText editText;
 
     public static final String PREFS = "prefsKey";
     public static final String KEY_SEARCH = "searchKey";
@@ -35,6 +32,16 @@ public class MainActivity extends BaseActivity implements LocationListener {
         dbService = new DBService(this);
         locationService = new LocationService(this, this);
         editText = findViewById(R.id.search_text);
+        editText.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View view, int keyCode, KeyEvent keyevent) {
+
+                if ((keyevent.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    doSearch();
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
 
@@ -47,6 +54,10 @@ public class MainActivity extends BaseActivity implements LocationListener {
 
     public void search(View v){
 
+        doSearch();
+    }
+
+    private void doSearch() {
         String searchText = editText.getText().toString();
         float locationX = 0;
         float locationY = 0;
@@ -65,14 +76,11 @@ public class MainActivity extends BaseActivity implements LocationListener {
         saveSharedPrefs(searchText);
         startActivity( new Intent(this, ResultsActivity.class));
 
-        searchButton = findViewById(R.id.search_button);
+
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.whoosh);
         mediaPlayer.start();
     }
-    // Temporary - will be moved to actionbar
-    public void goHistory(View view) {
-        startActivity(new Intent(this,HistoryActivity.class));
-    }
+
     @Override
     public void onRequestPermissionsResult(
             int requestCode,

@@ -6,13 +6,6 @@
     android:orientation="vertical"
     tools:context=".ResultsActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="gohome"
-        android:text="home" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
