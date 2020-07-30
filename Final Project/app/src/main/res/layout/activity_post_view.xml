@@ -7,10 +7,9 @@
     android:orientation="vertical"
     tools:context=".PostViewActivity">
 
-    <Button
-        android:id="@+id/button3"
+    <WebView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="gohome"
-        android:text="home" />
+        android:id="@+id/webviewid"
+        android:layout_height="match_parent">
+    </WebView>
 </LinearLayout>

@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
 import android.location.LocationListener;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,12 +22,11 @@ public class MainActivity extends BaseActivity implements LocationListener {
     private DBService dbService;
     private LocationService locationService;
     EditText editText;
+    private Button searchButton;
 
     public static final String PREFS = "prefsKey";
     public static final String KEY_SEARCH = "searchKey";
     public static final String KEY_POST_URL = "postURLKey";
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,8 @@ public class MainActivity extends BaseActivity implements LocationListener {
         dbService = new DBService(this);
         locationService = new LocationService(this, this);
         editText = findViewById(R.id.search_text);
-
     }
+
 
     private void saveSharedPrefs(String searchText){
         SharedPreferences pref = getSharedPreferences(PREFS,MODE_PRIVATE);
@@ -63,6 +64,10 @@ public class MainActivity extends BaseActivity implements LocationListener {
         //Save search term in shared prefs for next activity
         saveSharedPrefs(searchText);
         startActivity( new Intent(this, ResultsActivity.class));
+
+        searchButton = findViewById(R.id.search_button);
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.whoosh);
+        mediaPlayer.start();
     }
     // Temporary - will be moved to actionbar
     public void goHistory(View view) {

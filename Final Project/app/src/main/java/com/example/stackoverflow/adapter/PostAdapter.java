@@ -77,6 +77,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             postUserImage =  itemView.findViewById(R.id.user_image);
 
             postLink.setOnClickListener(this);
+            postTitle.setOnClickListener(this);
         }
 
         @Override
