@@ -64,7 +64,7 @@ public class HistoryActivity extends BaseActivity {
 
                 LinearLayout linearLayout = findViewById(R.id.historyLinear);
                 Snackbar snackbar = Snackbar
-                        .make(linearLayout, "Item was removed from the list.", Snackbar.LENGTH_LONG)
+                        .make(linearLayout, getString(R.string.delete_notification), Snackbar.LENGTH_LONG)
                         .addCallback(new BaseTransientBottomBar.BaseCallback<Snackbar>() {
                             public void onDismissed(Snackbar transientBottomBar, int event) {
                                 if (event != DISMISS_EVENT_ACTION) {

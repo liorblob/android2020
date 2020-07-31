@@ -117,4 +117,7 @@ public class MainActivity extends BaseActivity implements LocationListener {
     }
 
 
+    public void goHistory(View view) {
+        startActivity(new Intent(this, HistoryActivity.class));
+    }
 }
