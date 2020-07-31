@@ -29,5 +29,6 @@
     <string name="history_ac">History</string>
     <string name="about_ac">About</string>
     <string name="aboutStack">About StackOverflow</string>
+    <string name="delete_notification">Item was removed from the list.</string>
 
 </resources>

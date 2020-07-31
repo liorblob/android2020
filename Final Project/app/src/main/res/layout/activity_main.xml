@@ -43,5 +43,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="goHistory"
-        android:text="History" />
+        android:text="@string/history_ac" />
 </LinearLayout>
