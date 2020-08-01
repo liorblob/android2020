@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StackOverflow</string>
+    <string name="introduction">ברוכים הבאים לאפליקציה! אנא הזינו את מה שאתם מחפשים</string>
+    <string name="search_placeholder">חיפוש...</string>
+    <string name="search_button">חיפוש</string>
+    <string name="no_data_available">לא נמצאו תוצאות</string>
+    <string name="results_help">לחץ על תוצאה לפתיחה...</string>
+    <string name="history_help">לחץ על מונח כדי לבצע חיפוש מחודש</string>
+    <string name="history_delete">החלק את הפריט כדי למחוק</string>
+    <string name="mainaboutus">מידע עלינו</string>
+    <string name="imagename">הודיה ניר</string>
+    <string name="image1_age">גיל: 26</string>
+    <string name="image1_profession">מקצוע: אשת סיסטם סיטריקס</string>
+    <string name="image1_hobbies">תחביבים: ריקוד, קריאה, מפגשים עם חברים</string>
+    <string name="image2_name">איתמר גליק</string>
+    <string name="image2_age">גיל: 45</string>
+    <string name="image2_hobbies">תחביבים:צפיה בסרטים, מחשבים</string>
+    <string name="image3_Name">עמית מרקוס</string>
+    <string name="image3_age">גיל: 25</string>
+    <string name="image3_profession">מקצוע: מטמיעת מערכות סייבר</string>
+    <string name="image3_hobbies">תחביבים: צילום</string>
+    <string name="image4_name">ליאור בלובשטיין</string>
+    <string name="image4_age">גיל: 27</string>
+    <string name="image4_profession">מקצוע: מהנדס תוכנה</string>
+    <string name="image4_hobbies">תחביבים: בירה, נטפליקס, פגישות זום</string>
+    <string name="home">בית</string>
+    <string name="history_ac">היסטוריה</string>
+    <string name="about_ac">מידע</string>
+    <string name="aboutStack">מידע על האפליקציה</string>
+    <string name="delete_notification">הפריט הוסר מהרשימה</string>
+</resources>
