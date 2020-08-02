@@ -35,7 +35,7 @@ public class LocationService {
 
         } else {
             locationGranted = true;
-            Toast.makeText(context, "Permission (already) Granted!", Toast.LENGTH_SHORT).show();
+
         }
     }
 

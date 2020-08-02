@@ -73,7 +73,7 @@ public class HistoryActivity extends BaseActivity {
                                 }
                             }
                         });
-                snackbar.setAction("UNDO", new View.OnClickListener() {
+                snackbar.setAction(getString(R.string.undo_btn), new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
