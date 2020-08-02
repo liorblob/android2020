@@ -29,4 +29,5 @@
     <string name="about_ac">אודות</string>
     <string name="aboutStack">אודות האתר StackOverflow</string>
     <string name="delete_notification">הפריט הוסר מהרשימה</string>
+    <string name="undo_btn">בטל</string>
 </resources>

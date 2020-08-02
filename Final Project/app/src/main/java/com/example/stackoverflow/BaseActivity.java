@@ -13,7 +13,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME |
-                ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP | ActionBar.DISPLAY_USE_LOGO);
+                ActionBar.DISPLAY_SHOW_TITLE  | ActionBar.DISPLAY_USE_LOGO);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         return true;
     }
