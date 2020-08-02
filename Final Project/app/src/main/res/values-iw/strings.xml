@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">StackOverflow</string>
-    <string name="introduction">ברוכים הבאים לאפליקציה! אנא הזינו את מה שאתם מחפשים</string>
+    <string name="introduction">ברוכים הבאים לאפליקציה! אנא הזינו ערך לחיפוש</string>
     <string name="search_placeholder">חיפוש...</string>
     <string name="search_button">חיפוש</string>
     <string name="no_data_available">לא נמצאו תוצאות</string>
     <string name="results_help">לחץ על תוצאה לפתיחה...</string>
     <string name="history_help">לחץ על מונח כדי לבצע חיפוש מחודש</string>
     <string name="history_delete">החלק את הפריט כדי למחוק</string>
-    <string name="mainaboutus">מידע עלינו</string>
+    <string name="mainaboutus">אודות המפתחים</string>
     <string name="imagename">הודיה ניר</string>
     <string name="image1_age">גיל: 26</string>
     <string name="image1_profession">מקצוע: אשת סיסטם סיטריקס</string>
@@ -26,7 +26,7 @@
     <string name="image4_hobbies">תחביבים: בירה, נטפליקס, פגישות זום</string>
     <string name="home">בית</string>
     <string name="history_ac">היסטוריה</string>
-    <string name="about_ac">מידע</string>
-    <string name="aboutStack">מידע על האפליקציה</string>
+    <string name="about_ac">אודות</string>
+    <string name="aboutStack">אודות האתר StackOverflow</string>
     <string name="delete_notification">הפריט הוסר מהרשימה</string>
 </resources>
