@@ -23,8 +23,7 @@
     <string name="image4_age">Age: 27</string>
     <string name="image4_profession">Profession: Software Engineer</string>
     <string name="image4_hobbies">Hobbies: beer, netflix, zoom meetings</string>
-    <string name="empty" />
-
+    <string name="empty" translatable="false"/>
     <string name="home">Home</string>
     <string name="history_ac">History</string>
     <string name="about_ac">About</string>
